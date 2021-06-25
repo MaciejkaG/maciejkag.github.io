@@ -14,6 +14,6 @@
         });
         return vars;
     }
-    document.getElementById("text").innerHtml = getUrlVars()["text"];
+    document.getElementById("text").innerHtml = getUrlVars()["text"].replace("%20", " ");
     </script>
 </html>
