@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+            rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                color: white;
+                background-color: #42455a;
+            }
+            body::-webkit-scrollbar {
+                width: 0.42rem;
+            }
+            body::-webkit-scrollbar-track {
+                background: #252733;
+            }
+            @keyframes animated_gradient {
+	            0% { background-position: 0px 50%; }
+	            50% { background-position: 100% 50%; }
+	            100% { background-position: 0px 50%; }
+            }
+            body::-webkit-scrollbar-thumb {
+                background: linear-gradient(turquoise, blueviolet);
+            }
+            .title {
+                margin-left: 8%;
+                margin-top: 5%;
+                font-size: 6rem;
+                letter-spacing: 3px;
+                background: linear-gradient(to right, turquoise, blueviolet);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                display: inline-block;
+                background-size: 300%;
+                animation: animated_gradient 5s ease-in-out infinite;
+            }
+            .second-title {
+                margin-left: 12rem;
+                letter-spacing: 0.5px;
+            }
+            .footer {
+                font-family: 'Comforter Brush', cursive;
+                position: relative;
+                font-size: 150%;
+                text-align: center;
+                margin-left:auto;
+                margin-right: auto;
+            }
+            .navbar {
+                margin-top: -1rem;
+                margin-left: -0.5rem;
+                margin-right: -0.5rem;
+                left: auto;
+                height: 5rem;
+                top: 0px;
+                right: auto;
+                background: linear-gradient(to right, turquoise, blueviolet);
+                background-size: 200%;
+                animation: animated_gradient 5s ease-in-out infinite;
+            }
+            button:active {
+                transform: scale(0.99);
+            }
+            .where-button-alert {
+                visibility: hidden;
+                margin-top: 2rem;
+                position: absolute;
+                height: 7rem;
+                width: 12rem;;
+                margin-left: 45rem;
+                background-color: #292b38;
+                border-radius: 0.5rem;
+                box-shadow: 4px 4px 3px 1px #313131;
+  	            -webkit-box-shadow: 4px 4px 1px 1px #313131;
+            }
+            @keyframes arrow {
+                0% {top: 1rem;}
+                50% {top: 2rem;}
+                100% {top: 1rem;}
+            }
+            .alert-arrow-up {
+                position: relative;
+                top: 1rem;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                animation: arrow 1s infinite;
+            }
+            .where-button-alert-text {
+                margin-left: 0.5rem;
+                bottom: 1rem;
+                position: absolute;
+            }
+            .where-button-alert-button {
+                width: 5rem;
+                height: 2rem;
+                position: absolute;
+                right: 0.2rem;
+                bottom: 0.2rem;
+                border-radius: 0.5rem;
+                background: linear-gradient(to right, turquoise, blueviolet);
+                background-size: 200%;
+                animation: animated_gradient 5s ease-in-out infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <p style="font-size:large;position:absolute;left:40%;">*NAVIGATION MENU*</p>
+        </div>
+        <div class="where-button-alert" id="wherebuttonalertbox">
+            <i class="fas fa-arrow-up alert-arrow-up"></i>
+            <p class="where-button-alert-text">Navigation menu is right here :D</p>
+            <button class="where-button-alert-button" onclick="wherebuttonalertbuttonokbutton()">ok ty</button>
+        </div>
+        <h1 class="title">Maciejka</h1>
+        <p class="second-title">some kind of a hobbystic programmer<br>use the navigation menu ( <button class="where-button" onclick="wherebutton()">Where?</button> ) to get to other pages.</p>
+        <footer><p class="footer">By Maciejka</p><br><p>NOTE: This version of website is not finished yet.</p></footer>
+        <script src="https://kit.fontawesome.com/6f2ae87f3d.js" crossorigin="anonymous"></script>
+        <script>
+            function wherebuttonalertbuttonokbutton() {
+                document.getElementById("wherebuttonalertbox").style.visibility = "hidden";
+            }
+            function wherebutton() {
+                document.getElementById("wherebuttonalertbox").style.visibility = "visible";
+            }
+        </script>
+    </body>
+</html>
