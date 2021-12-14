@@ -1,78 +1,168 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home - MaciejkaG</title>
+        <title>Home</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+        <link
+            href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap"
             rel="stylesheet">
-        <style type="text/css">
-            @keyframes bg-slide {
-                from {left: -100%}
-                to {left: 0%}
-            }
+        <style>
             body {
-                position: relative;
                 font-family: 'Roboto', sans-serif;
                 color: white;
                 background-color: #42455a;
-                animation-name: bg-slide;
-                animation-duration: 1.5s;
-                animation-iteration-count: 1;
+            }
+            body::-webkit-scrollbar {
+                width: 0.42rem;
+            }
+            body::-webkit-scrollbar-track {
+                background: #252733;
+            }
+            @keyframes animated_gradient {
+	            0% { background-position: 0px 50%; }
+	            50% { background-position: 100% 50%; }
+	            100% { background-position: 0px 50%; }
+            }
+            body::-webkit-scrollbar-thumb {
+                background: linear-gradient(turquoise, blueviolet);
+            }
+            .title {
+                margin-left: 8%;
+                margin-top: 5%;
+                font-size: 6rem;
+                letter-spacing: 3px;
+                background: linear-gradient(to right, turquoise, blueviolet);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                display: inline-block;
+                background-size: 300%;
+                animation: animated_gradient 5s ease-in-out infinite;
+            }
+            .second-title {
+                margin-left: 12rem;
+                letter-spacing: 0.5px;
+            }
+            .footer {
+                font-family: 'Comforter Brush', cursive;
+                position: relative;
+                font-size: 150%;
+                text-align: center;
+                margin-left:auto;
+                margin-right: auto;
+            }
+            .where-button-alert {
+                visibility: hidden;
+                margin-top: 2rem;
+                position: absolute;
+                height: 7rem;
+                width: 12rem;;
+                margin-left: 45rem;
+                background-color: #292b38;
+                border-radius: 0.5rem;
+                box-shadow: 4px 4px 3px 1px #313131;
+  	            -webkit-box-shadow: 4px 4px 1px 1px #313131;
+            }
+            @keyframes arrow {
+                0% {top: 1rem;}
+                50% {top: 2rem;}
+                100% {top: 1rem;}
+            }
+            .alert-arrow-up {
+                position: relative;
+                top: 1rem;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                animation: arrow 1s infinite;
+            }
+            .where-button-alert-text {
+                margin-left: 0.5rem;
+                bottom: 1rem;
+                position: absolute;
+            }
+            .where-button-alert-button {
+                width: 5rem;
+                height: 2rem;
+                position: absolute;
+                right: 0.2rem;
+                bottom: 0.2rem;
+                border-radius: 0.5rem;
+                background: linear-gradient(to right, turquoise, blueviolet);
+                background-size: 200%;
+                animation: animated_gradient 5s ease-in-out infinite;
+            }
+            .navbar {
+                margin-top: -1rem;
+                margin-left: -0.5rem;
+                margin-right: -0.5rem;
+                left: auto;
+                height: 5rem;
+                top: 0px;
+                right: auto;
+                background: linear-gradient(to right, turquoise, blueviolet);
+                background-size: 200%;
+                animation: animated_gradient 5s ease-in-out infinite;
+            }
+            .navbar-position {
+                font-size: 150%;
+                letter-spacing: 0.15rem;
+                position: relative;
+                margin-left: 8rem;
+                margin-top: 1.7rem;
+                display: inline-block;
+            }
+            @keyframes navbar_position_hover {
+                from {color:rgb(46, 46, 46)}
+                to {color:rgb(94, 94, 94)}
+            }
+            @keyframes navbar_position_unhover {
+                from {color:rgb(94, 94, 94)}
+                to {color:rgb(46, 46, 46)}
+            }
+            .navbar-position-a {
+                animation: navbar_position_unhover 0.3s 1;
+                color: rgb(46, 46, 46);
+                text-decoration: none;
+            }
+            .navbar-position-a:hover {
+                animation: navbar_position_hover 0.3s 1;
+                color: rgb(94, 94, 94);
             }
             a {
-                color: #3e79e7;
+                color: rgb(98, 98, 255);
+                text-decoration: none;
             }
-            @keyframes effect {
-                0%   {color: turquoise;}
-                20%  {color: greenyellow;}
-                40%  {color: pink;}
-                60% {color: red;}
-                80% {color: yellow;}
-                100% {color: turquoise;}
-            }
-            .rainbow-animation {
-                color: transparent;
-                animation: effect 10s linear infinite;
+            a:hover {
+                color: rgb(78, 78, 201);
+                text-decoration: none;
             }
         </style>
     </head>
     <body>
-        <h1 class="rainbow-animation">Welcome</h1>
-        <p>Hello, welcome to my website, here you can download my creations. <br>I don't want this website to be beatufiul, i
-            just made it when i was bored, maybe i will add some style to it some day...<br><strong>Also if your browser will
-                tell you that files you will download here are malicious, they are not, browsers are just noticing that you
-                download files that are with .py extension or from unknown creator, you can even see the code if you are still
-                not sure.</strong></p>
-        <hr>
-        <h2>statboi the Discord bot</h2>
-        <p>First of all, i wanna show you my Discord bot, i am programmer of it, but i'm creating it together with my friend
-            Niokki who makes avatars, and grapical concepts, our bot is on <a
-                href="https://top.gg/bot/801110934571581470">top.gg</a> and at the moment it's on over 200 servers, it still
-            grows up. Basically it's statistics and multi-purpose bot.</p>
-        <hr>
-        <h2>EZbot</h2>
-        <p>EZbot is a Discord bot app made in Python using Discord.py, that let's you use and customize your own bot without
-            coding! All you need to do is to have Python installed and host your bot! It's really simple. I'm still working on
-            it, but you can download it <a href="https://github.com/statboi/EZbot">here</a></p>
-        <hr>
-        <h2>parkour prototype</h2>
-        <p>Also i was doing some things with Unity i guess so <a href="https://maciejkag.github.io/parkour-prototype/">this</a>
-            is one of my game named 'parkour prototype'</p>
-        <hr>
-        <h2>New version of the website (Not finished)</h2>
-        <p>I'm still working on it and its not finished but it already looks impressive so you can <a href="new-test.html">check it out</a></p>
-        <hr>
-        <h2>Some other stuff</h2>
-        <p>I made many, many, many things, some are pubic, some are private, or for my friends. I made PyDisc, simple tool to
-            calculate total, free, and used disk space, in GB and in percents. My games in Unity, that are in development, and
-            only my friends got access to it at the moment. And yeah, that's basically it... Oh! And, i made Discord Rich
-            Presence rickroller, you just need to run this using Python, enable presence in Discord settings, and than it will
-            make presence with buttons and lyrics of <a href="https://youtu.be/dQw4w9WgXcQ">Rick Astley's Never Gonna Give You
-                Up</a>, you can check out screenshot's and download it on it's <a
-                href="https://gist.github.com/statboi/c1782988e2b694547997de2efb3f46ca">Gist</a></p>
+        <div class="navbar">
+            <p class="navbar-position">
+                <strong><a href="#" class="navbar-position-a">Home</a></strong>
+            </p><p class="navbar-position">
+                <strong><a href="./my-projects" class="navbar-position-a">My projects</a></strong>
+            </p>
+        </div>
+        <div class="where-button-alert" id="wherebuttonalertbox">
+            <i class="fas fa-arrow-up alert-arrow-up"></i>
+            <p class="where-button-alert-text">Navigation menu is right here :D</p>
+            <button class="where-button-alert-button" onclick="wherebuttonalertbuttonokbutton()">ok ty</button>
+        </div>
+        <h1 class="title">Maciejka</h1>
+        <p class="second-title">some kind of a hobbystic programmer<br>use the navigation menu ( <button class="where-button" onclick="wherebutton()">Where?</button> ) to get to other pages.<br>Feeling nostalgic about this site? Go to old version <a href="./old.html">here</a> if you want.</p>
+        <footer><p class="footer">By Maciejka</p></footer>
+        <script src="https://kit.fontawesome.com/6f2ae87f3d.js" crossorigin="anonymous"></script>
         <script>
-            document.getElementById("demo").style.backgroundColor = "red";
+            function wherebuttonalertbuttonokbutton() {
+                document.getElementById("wherebuttonalertbox").style.visibility = "hidden";
+            }
+            function wherebutton() {
+                document.getElementById("wherebuttonalertbox").style.visibility = "visible";
+            }
         </script>
     </body>
 </html>
