@@ -129,3 +129,19 @@ a:hover {
     color: rgb(78, 78, 201);
     text-decoration: none;
 }
+.github {
+    height: 4rem;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: white;
+    border-radius: 2rem;
+}
+@keyframes github-jump {
+    0% {rotation: 1rem}
+    50% {bottom: 2rem}
+    100% {bottom: 1rem}
+}
+.github:hover {
+    animation: github-jump 0.5s infinite
+}
