@@ -129,6 +129,7 @@ a:hover {
 }
 .github {
     height: 4rem;
+    position: -webkit-fixed;
     position: fixed;
     right: 1rem;
     bottom: 1rem;
