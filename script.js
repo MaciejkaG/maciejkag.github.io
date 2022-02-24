@@ -19,21 +19,21 @@ function wherebutton() {
 document.getElementById("switch").addEventListener("change", function() {
     if (document.getElementById("switch").checked == true) {
         document.getElementsByTagName("body")[0].setAttribute("style", "animation: darkTheme 0.5s 1; color: white; background-color: #42455a;");
-        setCookie(darkTheme, 1);
+        setCookie("darkTheme", 1);
     } else {
         document.getElementsByTagName("body")[0].setAttribute("style", "animation: lightTheme 0.5s 1; color: black;");
         let myGreeting = setTimeout(() => {
             document.getElementsByTagName("body")[0].setAttribute("style", "animation: bg-animation 10s ease-in-out infinite;");
         }, 500);
-        setCookie(darkTheme, 0);
+        setCookie("darkTheme", 0);
     }
 });
-if (getCookie(darkTheme)==1)
+if (getCookie("darkTheme")==1)
 {
     document.getElementById("switch").checked = true;
-    setCookie(darkTheme, 1);
+    setCookie("darkTheme", 1);
 }
 else {
     document.getElementById("switch").checked = false;
-    setCookie(darkTheme, 0);
+    setCookie("darkTheme", 0);
 }
