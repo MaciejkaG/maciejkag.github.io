@@ -31,7 +31,7 @@ document.getElementById("switch").addEventListener("change", function() {
 if (getCookie("darkTheme")==1)
 {
     document.getElementById("switch").checked = true;
-    document.getElementsByTagName("body")[0].setAttribute("style", "color: white; background-color: #42455a;");
+    document.getElementsByTagName("body")[0].setAttribute("style", "animation: darkTheme 0.1s 1; color: white; background-color: #42455a;");
     setCookie("darkTheme", 1);
 }
 else {
