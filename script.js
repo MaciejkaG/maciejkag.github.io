@@ -31,14 +31,11 @@ document.getElementById("switch").addEventListener("change", function() {
 if (getCookie("darkTheme")==1)
 {
     document.getElementById("switch").checked = true;
-    document.getElementsByTagName("body")[0].setAttribute("style", "animation: darkTheme 0.5s 1; color: white; background-color: #42455a;");
+    document.getElementsByTagName("body")[0].setAttribute("style", "color: white; background-color: #42455a;");
     setCookie("darkTheme", 1);
 }
 else {
     document.getElementById("switch").checked = false;
-    document.getElementsByTagName("body")[0].setAttribute("style", "animation: lightTheme 0.5s 1; color: black;");
-    let bgAnimation = setTimeout(() => {
-        document.getElementsByTagName("body")[0].setAttribute("style", "animation: bg-animation 10s ease-in-out infinite;");
-    }, 500);
+    document.getElementsByTagName("body")[0].setAttribute("style", "animation: bg-animation 10s ease-in-out infinite; color: black;");
     setCookie("darkTheme", 0);
 }
